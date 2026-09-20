@@ -1,4 +1,4 @@
-# Zyndex
+# Zyndex-SS
 
 Zyndex is a cloud-native ScholarSphere Digital solution consisting of a React + Vite frontend and a Spring Cloud microservices suite.
 
