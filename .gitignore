@@ -1,0 +1,25 @@
+.env
+.env.*
+!.env.example
+
+node_modules/
+dist/
+build/
+
+# Maven build output
+target/
+
+# Local database and runtime uploads
+mysql-data/
+backend/uploads/
+**/uploads/
+
+*.log
+
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/node_modules/
+
+spring-backend/target/
+spring-backend/*.log

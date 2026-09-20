@@ -1,0 +1,41 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: subscription-service
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:zyndex_subscription}?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:}
+  mail:
+    host: ${OTP_SMTP_HOST:}
+    port: ${OTP_SMTP_PORT:587}
+    username: ${OTP_SMTP_USER:}
+    password: ${OTP_SMTP_PASS:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          starttls:
+            enable: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+razorpay:
+  key-id: ${RAZORPAY_KEY_ID:}
+  key-secret: ${RAZORPAY_KEY_SECRET:}
+  webhook-secret: ${RAZORPAY_WEBHOOK_SECRET:}
+
+zyndex:
+  otp-mail-from: ${OTP_MAIL_FROM:${OTP_SMTP_USER:}}
+
+payment:
+  mode: ${PAYMENT_MODE:SIMULATED}
+

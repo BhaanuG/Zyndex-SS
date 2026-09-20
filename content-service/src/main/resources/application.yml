@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: content-service
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:zyndex_content}?createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:}
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 30MB
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zyndex:
+  upload-dir: ${UPLOAD_DIR:../backend/uploads}
