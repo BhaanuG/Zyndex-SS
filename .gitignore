@@ -16,6 +16,11 @@ backend/uploads/
 
 *.log
 
+# Local planning and audit notes
+*_Audit.md
+phase*update*.md
+Use Case.md
+
 backend/.env
 backend/.env.*
 !backend/.env.example
